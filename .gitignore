@@ -1,10 +1,12 @@
 __pycache__/
-*.py[cod]
-*$py.class
 
 .DS_Store
 
 .vscode/
 
 lab2/
-report/
+lab3/
+
+# Report
+report/screenshots/
+*.docx
