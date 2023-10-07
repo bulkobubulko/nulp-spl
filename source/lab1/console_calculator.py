@@ -6,9 +6,6 @@ from history_handling import HISTORY_FILE
 
 # Default values
 decimal_places = 2
-number_of_calculations = None
-
-# Main functions
 
 def calculate_option():
     """

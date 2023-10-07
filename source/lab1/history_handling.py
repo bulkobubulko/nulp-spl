@@ -1,6 +1,8 @@
-HISTORY_FILE = 'source/lab1/history.txt'
+"""This module contains functions for handling history."""
 
-# History functions
+# Default values
+HISTORY_FILE = 'source/lab1/history.txt'
+number_of_calculations = None
 
 def save_history(HISTORY_FILE, history):
     """
@@ -63,3 +65,12 @@ def clear_history(HISTORY_FILE):
     with open(HISTORY_FILE, "w") as file:
         file.write("")
     print("History cleared")
+    
+    
+def save_result(result, HISTORY_FILE, number_of_calculations):
+    history = load_history(HISTORY_FILE)
+    if number_of_calculations is not None:
+        if len(history) >= number_of_calculations:
+            history.pop(0)
+    history.append(result)
+    save_history(HISTORY_FILE, history)
