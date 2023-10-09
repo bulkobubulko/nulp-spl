@@ -4,8 +4,9 @@ __pycache__/
 
 .vscode/
 
+draft.py
+
 source/lab2/constants.py
-lab3/
 lab4/
 
 # Report

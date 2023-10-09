@@ -1,6 +1,6 @@
 # Import functions from console_calculator.py
-from source.lab1.history_handling import save_result
-from source.lab1.console_calculator import calculate_option, settings_option
+from history_handling import save_result
+from console_calculator import calculate_option, settings_option
 
 from history_handling import HISTORY_FILE, number_of_calculations
 
