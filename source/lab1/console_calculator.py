@@ -1,11 +1,18 @@
-from calculations import calculate
-from input_handling import get_input
-from history_handling import display_history, clear_history
+# Include the parent directory in the system's import path
+import sys
+import os
 
-from history_handling import HISTORY_FILE
+current_dir = os.path.dirname(os.path.abspath(__file__))
+parent_dir = os.path.abspath(os.path.join(current_dir, '..'))
+sys.path.append(parent_dir)
+
+from lab1.calculations import calculate
+from lab1.input_handling import get_input
+from lab1.history_handling import display_history, clear_history
 
 # Default values
 decimal_places = 2
+number_of_calculations = None
 
 def calculate_option():
     """
@@ -27,7 +34,7 @@ def calculate_option():
         
     return result_dict
 
-def settings_option():
+def settings_option(HISTORY_FILE):
     """Display settings options and perform the selected action."""
     while True:
         print("\nOptions:")

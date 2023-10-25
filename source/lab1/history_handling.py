@@ -1,9 +1,5 @@
 """This module contains functions for handling history."""
 
-# Default values
-HISTORY_FILE = 'source/lab1/history.txt'
-number_of_calculations = None
-
 def save_history(HISTORY_FILE, history):
     """
     Saves history to file.

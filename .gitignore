@@ -1,13 +1,16 @@
+# Pyhton
 __pycache__/
 
+# Mac
 .DS_Store
 
+# VSCode
 .vscode/
 
+# Files
 draft.py
-
-source/lab2/constants.py
 lab4/
+runner.py
 
 # Report
 report/screenshots/
