@@ -1,1 +1,1 @@
-{"font": "clr7x8", "size": [150, 25], "symbol": "~", "color": "\u001b[31m"}
+{"font": "clb6x10", "size": [80, 25], "symbols": ["#", "*"], "color": "\u001b[39m", "alignment": "left", "is_3d": false}

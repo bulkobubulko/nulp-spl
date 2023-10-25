@@ -1,8 +1,7 @@
-""" 
-ASCII-art generator.
-"""
-import pyfiglet
+"""ASCII-art generator."""
 
+import os
+import pyfiglet
 from pyfiglet import Figlet
 from colorama import Fore
 
@@ -13,11 +12,12 @@ from colorama import init as colorama_init
 # autoreset=True -> Color settings will automatically reset after each print statement
 colorama_init(autoreset=True)
 
-FOLDER_PATH = 'source/lab3/ASCII-arts/'
+# FOLDER_PATH = 'source/lab3/ASCII-arts/'
 
-def settings(settings_obj):
+def settings(settings_obj, SETTINGS_FILE_PATH):    
     while True:
         print('Options (1/2/3/4/5/6):')
+        print('0. Show current settings')
         print('1. Change font')
         print('2. Change size')
         print('3. Change symbol')
@@ -26,13 +26,14 @@ def settings(settings_obj):
         print('6. Back')
         
         user_input = input('Enter option number: ')
-        
+        if user_input == '0':
+            settings_obj.show_settings()
         if user_input == '1':
             settings_obj.set_font(set_font())
         elif user_input == '2':
-            settings_obj.set_size(set_size())
+            settings_obj.set_size(*set_size())
         elif user_input == '3':
-            settings_obj.set_symbol(set_symbol())
+            settings_obj.set_symbols(*set_symbols())
         elif user_input == '4':
             settings_obj.set_color(set_color())
         elif user_input == '5':
@@ -40,29 +41,42 @@ def settings(settings_obj):
         elif user_input == '6':
             break
 
-def create_ascii_art(settings_obj):
+def get_phrase():
+    """Get user input.
+    
+    Returns:
+        user_input (str): User input.
     """
-    Ask user for phrase and show ASCII-art.
+    user_input = input('Enter the phrase: ')
+    
+    return user_input
+
+def create_ascii_art(FOLDER_PATH, settings_obj):
+    """Ask user for phrase and show ASCII-art.
     
     Args:
         settings_obj (AsciiArtSettings): Object with settings.
     """
-    # enter phrase
-    user_input = input('Enter the phrase: ')   
+    user_input = get_phrase() 
+    width, height = settings_obj.size
+    try:
+        check_size(user_input, width, height)
+    except ValueError as e:
+        print(f"An error occurred: {e}")
+        return None
     
-    art = Figlet(font=settings_obj.font , width=settings_obj.size[0])
+    art = Figlet(font=settings_obj.font, width=settings_obj.size[0])
     art = art.renderText(user_input)
     
-    if settings_obj.symbol:
-        art = change_symbols(art, settings_obj.symbol)
+    if settings_obj.symbols:
+        art = change_symbols(art, settings_obj.symbols[0])
         
     art = settings_obj.color + art
     
-    preview_art(art)
+    preview_art(FOLDER_PATH, art)
     
 def set_font():
-    """
-    Set font for ASCII-art.
+    """Set font for ASCII-art.
     
     Returns:
         font (str): Font name.
@@ -80,41 +94,86 @@ def set_font():
     return font
 
 def set_size():
-    """
-    Set size for ASCII-art.
+    """Set size for ASCII-art.
     
     Returns:
         width (int): Width of ASCII-art.
+        height (int): Height of ASCII-art.
     """
     width = int(input('Enter width: '))
     height = int(input('Enter height: '))
     
     return width, height
 
-def set_symbol():
-    """
-    Set symbol for ASCII-art.
+def check_size(char_str, width, height):
+    char_width = 8
+    char_height = 8
+    
+    str_length = len(char_str) * char_width
+    terminal_columns, terminal_lines = os.get_terminal_size()
+    
+    if width < char_width:
+        raise ValueError(f"Width {width} is too small for the string length of {str_length}")
+    elif width > terminal_columns:
+        raise ValueError(f"Width {width} exceeds the terminal length of {terminal_columns}")
+    else:
+        pass
+        
+    if height < char_height or height < str_length / width:
+        raise ValueError(f"Height {height} is too small for the string length of {str_length}")
+    elif height > terminal_lines:
+        raise ValueError(f"Height {height} exceeds the terminal length of {str_length}")
+    else:
+        pass
+    
+def set_symbols():
+    """Set symbol for ASCII-art.
     
     Returns:
         symbol (str): Symbol to replace.
     """
-    symbol = input('Enter symbol: ')
+    regular_symbol = input('Enter regular symbol: ')
+    
+    set_shadow = input('Do you want to set a shadow symbol? (y/n): ')
+    if set_shadow.lower() == 'y':
+        shadow_symbol = input('Enter shadow symbol: ')
+    else:
+        shadow_symbol = ''
     
     # Get list of ASCII symbols
     ascii_dec_values = [i for i in range(0, 256)]
     ascii_symbols = [chr(i) for i in ascii_dec_values]
     
     # Check if symbol is in ASCII
-    if symbol not in ascii_symbols:
+    if regular_symbol and shadow_symbol not in ascii_symbols and shadow_symbol != '':
         print('Symbol is not in ASCII.')
         return None
     else:
         print("Symbol changed!")
-        return symbol
+        return regular_symbol, shadow_symbol
+    
+def set_alignment():
+    """Set alignment for ASCII-art.
+    
+    Returns:
+        alignment (str): Alignment.
+    """
+    alignment = input('Enter alignment (left/center/right): ')
+    
+    return alignment
+
+def set_3d_option():
+    while True:
+        user_input = input('3D option (y/n): ')
+        if user_input == 'y':
+            return True
+        elif user_input == 'n':
+            return False
+        else:
+            print('Invalid input. Please enter y or n.')
 
 def change_symbols(art, symbol):
-    """  
-    Change symbols in ASCII-art.
+    """Change symbols in ASCII-art.
     
     Args:
         art (str): ASCII-art.
@@ -130,8 +189,7 @@ def change_symbols(art, symbol):
     return art
     
 def set_color():
-    """  
-    Set color for ASCII-art.
+    """Set color for ASCII-art.
     
     Returns:
         color_code (str): Color code.
@@ -154,11 +212,20 @@ def set_color():
         return color_code
     except IndexError:
         print(f'Color number is not in range. Available colors are in range from 1 to {len(colors)}.')
+        
+def set_alignment():
+    """Set alignment for ASCII-art.
+    
+    Returns:
+        alignment (str): Alignment.
+    """
+    alignment = input('Enter alignment (left/center/right): ')
+    
+    return alignment
     
 
-def preview_art(art):
-    """
-    Preview ASCII-art.
+def preview_art(FOLDER_PATH, art):
+    """Preview ASCII-art.
     
     Args:
         art (str): ASCII-art.
@@ -168,13 +235,12 @@ def preview_art(art):
     save_art_answ = input('Do you want to save your art? (y/n): ')
     
     if save_art_answ == 'y':
-        save_art(art)
+        save_art(FOLDER_PATH, art)
     else:
         pass
 
-def save_art(art):    
-    """
-    Save ASCII-art to file.
+def save_art(FOLDER_PATH, art):    
+    """Save ASCII-art to file.
     
     Args:
         art (str): ASCII-art.
@@ -185,9 +251,8 @@ def save_art(art):
     with open(formated_file_name, 'w') as file:
         file.write(art)
 
-def show_art():
-    """  
-    Show ASCII-art from file.
+def show_art(FOLDER_PATH):
+    """Show ASCII-art from file.
     
     Raises:
         FileNotFoundError: If file not found.
