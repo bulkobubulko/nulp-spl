@@ -9,7 +9,6 @@ sys.path.append(parent_dir)
 # Imports
 from lab3.ascii_art_settings import AsciiArtSettings
 from lab3.ascii_art_generator import show_art
-from lab4.font8x8 import font8x8
 from lab4.ascii_art_generator import settings, create_ascii_art
 
 # Constants

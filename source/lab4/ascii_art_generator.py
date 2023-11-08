@@ -9,8 +9,7 @@ sys.path.append(parent_dir)
 # Imports
 from lab3.ascii_art_generator import get_phrase
 from lab3.ascii_art_generator import set_size, set_symbols, set_color, set_alignment, set_3d_option
-from lab3.ascii_art_generator import preview_art
-from lab3.ascii_art_settings import AsciiArtSettings
+from lab3.ascii_art_generator import check_size, preview_art
 from lab4.font8x8 import font8x8
 
 # Constants
@@ -128,7 +127,7 @@ def render(char_str, color, regular_symbol, shadow_symbol, width, height, alignm
                 set_bit_list = []                
                 for row_item in range(char_width):
                     bitmap = font8x8[line[char_item]]
-                    set_bit = bitmap[column_item] & (1 << row_item)
+                    set_bit = (1 << row_item) & bitmap[column_item]
                     if set_bit:
                         set_bit_list.append(SYMBOL)
                     else:
@@ -155,17 +154,32 @@ def create_ascii_art(FOLDER_PATH, settings_obj):
         settings_obj (AsciiArtSettings): Object with settings.
     """
     char_str = get_phrase()
-    
-    art = render(char_str, 
-                 settings_obj.color,
-                 settings_obj.symbols[0], 
-                 settings_obj.symbols[1], 
-                 settings_obj.size[0], 
-                 settings_obj.size[1], 
-                 settings_obj.alignment,
-                 settings_obj.is_3d)
+    width, height = settings_obj.size
     
     try:
-        preview_art(FOLDER_PATH, art)
-    except Exception as e:
-        print(f"An error occurred while previewing the ASCII art: {str(e)}")
+        check_size(char_str, width, height)
+    except ValueError as e:
+        print(f"An error occurred: {e}")
+        return None
+    
+    while True:
+        art = render(char_str, 
+                    settings_obj.color,
+                    settings_obj.symbols[0], 
+                    settings_obj.symbols[1], 
+                    settings_obj.size[0], 
+                    settings_obj.size[1], 
+                    settings_obj.alignment,
+                    settings_obj.is_3d)
+        
+        try:
+            preview_art(FOLDER_PATH, art)
+        except Exception as e:
+            print(f"An error occurred while previewing the ASCII art: {str(e)}")
+            
+        change_settings = input('Do you want to change settings? (y/n): ')
+         
+        if change_settings == 'y':
+            settings(settings_obj)
+        else:
+            break

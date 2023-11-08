@@ -14,7 +14,7 @@ colorama_init(autoreset=True)
 
 # FOLDER_PATH = 'source/lab3/ASCII-arts/'
 
-def settings(settings_obj, SETTINGS_FILE_PATH):    
+def settings(settings_obj):    
     while True:
         print('Options (1/2/3/4/5/6):')
         print('0. Show current settings')

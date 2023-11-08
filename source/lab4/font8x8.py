@@ -1,6 +1,19 @@
 # Source: https://github.com/dhepper/font8x8
 # 8x8 pixel bitmap
 # 128x8
+
+# The character 'A' (0x41 / 65) is encoded as 
+# { 0x0C, 0x1E, 0x33, 0x33, 0x3F, 0x33, 0x33, 0x00}
+
+#     0x0C => 0000 1100 => ..XX....
+#     0X1E => 0001 1110 => .XXXX...
+#     0x33 => 0011 0011 => XX..XX..
+#     0x33 => 0011 0011 => XX..XX..
+#     0x3F => 0011 1111 => xxxxxx..
+#     0x33 => 0011 0011 => XX..XX..
+#     0x33 => 0011 0011 => XX..XX..
+#     0x00 => 0000 0000 => ........
+
 font8x8 = [
     [ 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00],   # U+0000 (nul)
     [ 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00],   # U+0001
