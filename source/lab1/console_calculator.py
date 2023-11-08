@@ -72,7 +72,10 @@ def format_result(result, decimal_places):
     Returns:
         formatted_result (str): Formatted result
     """
-    return f"{result:.{decimal_places}f}"
+    if result == "undefined":
+        return "undefined"
+    else:
+        return f"{result:.{decimal_places}f}"
 
 def format_dict(first_number, second_number, operator, formatted_result):
     """

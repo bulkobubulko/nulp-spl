@@ -30,7 +30,10 @@ def load_history(HISTORY_FILE):
         with open(HISTORY_FILE, "r") as file:
             for line in file:
                 operation, result = line.strip().split(" = ")
-                result_dict = {'operation': operation, 'result': float(result)}
+                if result == "undefined":
+                    result_dict = {'operation': operation, 'result': result}
+                else:
+                    result_dict = {'operation': operation, 'result': float(result)}
                 history.append(result_dict)
     except FileNotFoundError:
         pass 
