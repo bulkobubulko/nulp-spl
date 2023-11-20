@@ -14,6 +14,9 @@ draft.py
 report/screenshots/
 *.docx
 
-
 source/utility
-source/lab8
+
+source/lab8/data
+source/lab8/data_preprocessing.py
+source/lab8/main.py
+source/lab8/USA_Housing.csv
