@@ -1,45 +1,59 @@
-# Include the parent directory in the system's import path
-import sys
-import os
+import importlib
 
-# Get the absolute path to the directory containing runner.py
-current_dir = os.path.dirname(os.path.abspath(__file__))
+class Runner:
+    """
+    This class provides an interface for users to select and execute labs 
+    within the specified range (Lab 1 to Lab 8). It utilizes a modular 
+    approach, importing the 'main' function from the respective lab modules.
+    """
+    MAX_LAB_NUMBER = 8
 
-# Add the parent directory to sys.path
-parent_dir = os.path.abspath(os.path.join(current_dir, '..'))
-sys.path.append(parent_dir)
+    @staticmethod   
+    def run_lab(lab_number):
+        """Run the selected lab."""
+        module_name = f"source.lab{lab_number}.main"
 
-# Import main from each lab
-from source.lab1 import main as lab1
-from source.lab2 import main as lab2
-from source.lab3 import main as lab3
-from source.lab4 import main as lab4
-from source.lab5 import main as lab5
-from source.lab6 import main as lab6
+        try:
+            # Import the 'main' function from the lab module
+            main_module = importlib.import_module(module_name)
+            main_function = getattr(main_module, "main")
 
-def main():
-    print('Choose lab:')
-    print('1. Lab1')
-    print('2. Lab2')
-    print('3. Lab3')
-    print('4. Lab4')
-    print('5. Lab5')
-    print('6. Lab6')
-    
-    user_input = input('Enter option number: ')
-    
-    if user_input == '1':
-        print(f"Lab1: {lab1.main()}")
-    if user_input == '2':
-        print(f"Lab2: {lab2.main()}")
-    if user_input == '3':
-        print(f"Lab3: {lab3.main()}")
-    if user_input == '4':
-        print(f"Lab4: {lab4.main()}")
-    if user_input == '5':
-        print(f"Lab5: {lab5.main()}")
-    if user_input == '6':
-        print(f"Lab6: {lab6.main()}")
-     
+            # Check if 'main' is callable
+            if callable(main_function):
+                main_function()
+                print(f"Lab {lab_number} executed successfully.")
+            else:
+                print(f"Error: 'main' function not found in module {module_name}")
+
+        except ImportError as e:
+            print(f"Error importing module {module_name}: {e}")
+
+    def get_user_input(self):
+        """Get user input for lab selection."""
+        while True:
+            try:
+                print(f"\nSelect a lab to run (1-{self.MAX_LAB_NUMBER}) or press 'q' to quit:")
+                user_input = input("Lab: ")
+                
+                if user_input.lower() == 'q':
+                    print("Exiting...")
+                    return None
+                
+                lab_number = int(user_input)
+                if 1 <= lab_number <= self.MAX_LAB_NUMBER:
+                    return lab_number
+                else:
+                    print(f"Please enter a number between 1 and {self.MAX_LAB_NUMBER}.")
+
+            except ValueError:
+                print("Please enter a valid integer.")
+
+    def main(self):
+        while True:
+            lab_number = self.get_user_input()
+            if lab_number is None:
+                break
+            self.run_lab(lab_number)
+
 if __name__ == "__main__":
-    main()
+    Runner().main()
