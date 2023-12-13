@@ -1,18 +1,9 @@
-# Include the parent directory in the system's import path
-import sys
-import os
-
-current_dir = os.path.dirname(os.path.abspath(__file__))
-parent_dir = os.path.abspath(os.path.join(current_dir, '..'))
-sys.path.append(parent_dir)
-
 # Imports
 from math import sin, cos
 import time
 import json
 from colorama import Fore
 from colorama import init as colorama_init
-from lab3.ascii_art_generator import set_color
 
 # Initialize colorama
 # autoreset=True -> Color settings will automatically reset after each print statement

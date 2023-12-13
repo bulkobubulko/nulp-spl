@@ -59,7 +59,6 @@ class DataExploration():
             max_value = self.csv_file[column].max()
             median = self.csv_file[column].median()
             print(f"Column: {column}, min: {min_value}, max: {max_value}, median: {median}")
-            
 class DataCleaning(DataExploration):
     """Class for data cleaning operations"""
     def __init__(self, csv_file, folder_path_plots, folder_path_datasets) -> None:
@@ -90,7 +89,6 @@ class DataCleaning(DataExploration):
             
             self.csv_file.to_csv(cleaned_file_path, index=False)
             return cleaned_file_path
-
         
 class DataVisualization(DataExploration):
     """Class for data visualization operations"""

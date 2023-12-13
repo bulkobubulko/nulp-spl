@@ -14,7 +14,6 @@ We are using Client Credentials Flow. It works like this:
     2. Server returns access token.
     3. Use access token to make requests to Spotify Web API.
 """
-
 import os
 import json
 import base64

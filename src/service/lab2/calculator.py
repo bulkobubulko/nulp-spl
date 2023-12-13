@@ -1,18 +1,6 @@
 """Calculator class for the calculator program."""
 
-# Include the parent directory in the system's import path
-import sys
-import os
-
-current_dir = os.path.dirname(os.path.abspath(__file__))
-parent_dir = os.path.abspath(os.path.join(current_dir, '..'))
-sys.path.append(parent_dir)
-
-# Importing functions from lab1
-from lab1.history_handling import save_result
-from lab1.console_calculator import calculate_option, settings_option
-
-HISTORY_FILE = 'source/lab2/history.txt'
+HISTORY_FILE = 'data/lab2/history.txt'
 
 class Calculator():
     def __init__(self):

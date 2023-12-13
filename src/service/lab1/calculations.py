@@ -1,12 +1,4 @@
-# Include the parent directory in the system's import path
-import sys
-import os
-
-current_dir = os.path.dirname(os.path.abspath(__file__))
-parent_dir = os.path.abspath(os.path.join(current_dir, '..'))
-sys.path.append(parent_dir)
-
-from lab1.input_handling import get_input
+"""Module for basic calculator operations."""
 
 def addition(first_number, second_number):
     return first_number + second_number

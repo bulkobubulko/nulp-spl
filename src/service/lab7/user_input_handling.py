@@ -1,7 +1,3 @@
-from spotify_api import search_for_artist, search_for_track
-from menus import search_for_artist_options_menu, search_for_track_options_menu
-from utility.data_utils import log_user_history
-
 FOLDER_PATH_USER_LOGS = 'source/lab7/data/user_logs.log'
 
 def get_artist_name_from_user():

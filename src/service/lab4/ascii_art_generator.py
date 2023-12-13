@@ -1,17 +1,3 @@
-# Include the parent directory in the system's import path
-import sys
-import os
-
-current_dir = os.path.dirname(os.path.abspath(__file__))
-parent_dir = os.path.abspath(os.path.join(current_dir, '..'))
-sys.path.append(parent_dir)
-
-# Imports
-from lab3.ascii_art_generator import get_phrase
-from lab3.ascii_art_generator import set_size, set_symbols, set_color, set_alignment, set_3d_option
-from lab3.ascii_art_generator import check_size, preview_art
-from lab4.font8x8 import font8x8
-
 # Constants
 SPACE = 0
 SYMBOL = 1

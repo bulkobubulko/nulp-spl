@@ -1,16 +1,6 @@
-import os
-import sys
-
-current_dir = os.path.dirname(os.path.abspath(__file__))
-parent_dir = os.path.abspath(os.path.join(current_dir, '..'))
-sys.path.append(parent_dir)   
-
 from prettytable import PrettyTable
-from spotify_api import get_artists_top_tracks, get_artists_albums, get_artists_related_artists, get_artist_followers, get_artist_genres
-from spotify_api import get_track_artist, get_track_album, get_track_duration, get_track_popularity, get_track_release_date, get_track_genres, get_track_explicit
-from utility.data_utils import save_data
 
-FOLDER_PATH_OUTPUT = 'source/lab7/data/output/'
+FOLDER_PATH_OUTPUT = 'data/lab7/output/'
 
 def display_data(data, field_names, entity_name):
     if not data:
