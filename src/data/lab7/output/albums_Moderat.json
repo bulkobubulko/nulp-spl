@@ -1,0 +1,972 @@
+[
+  {
+    "album_group": "album",
+    "album_type": "album",
+    "artists": [
+      {
+        "external_urls": {
+          "spotify": "https://open.spotify.com/artist/2exkZbmNqMKnT8LRWuxWgy"
+        },
+        "href": "https://api.spotify.com/v1/artists/2exkZbmNqMKnT8LRWuxWgy",
+        "id": "2exkZbmNqMKnT8LRWuxWgy",
+        "name": "Moderat",
+        "type": "artist",
+        "uri": "spotify:artist:2exkZbmNqMKnT8LRWuxWgy"
+      }
+    ],
+    "external_urls": {
+      "spotify": "https://open.spotify.com/album/2RljFhpHqKxuULr0kaNCPM"
+    },
+    "href": "https://api.spotify.com/v1/albums/2RljFhpHqKxuULr0kaNCPM",
+    "id": "2RljFhpHqKxuULr0kaNCPM",
+    "images": [
+      {
+        "height": 640,
+        "url": "https://i.scdn.co/image/ab67616d0000b273707497f10a9fc37439bd2609",
+        "width": 640
+      },
+      {
+        "height": 300,
+        "url": "https://i.scdn.co/image/ab67616d00001e02707497f10a9fc37439bd2609",
+        "width": 300
+      },
+      {
+        "height": 64,
+        "url": "https://i.scdn.co/image/ab67616d00004851707497f10a9fc37439bd2609",
+        "width": 64
+      }
+    ],
+    "is_playable": true,
+    "name": "II (10th Anniversary Sped-up Edition)",
+    "release_date": "2023-08-02",
+    "release_date_precision": "day",
+    "total_tracks": 12,
+    "type": "album",
+    "uri": "spotify:album:2RljFhpHqKxuULr0kaNCPM"
+  },
+  {
+    "album_group": "album",
+    "album_type": "album",
+    "artists": [
+      {
+        "external_urls": {
+          "spotify": "https://open.spotify.com/artist/2exkZbmNqMKnT8LRWuxWgy"
+        },
+        "href": "https://api.spotify.com/v1/artists/2exkZbmNqMKnT8LRWuxWgy",
+        "id": "2exkZbmNqMKnT8LRWuxWgy",
+        "name": "Moderat",
+        "type": "artist",
+        "uri": "spotify:artist:2exkZbmNqMKnT8LRWuxWgy"
+      }
+    ],
+    "external_urls": {
+      "spotify": "https://open.spotify.com/album/1Jezw4Z2jKAhBF193bY5qM"
+    },
+    "href": "https://api.spotify.com/v1/albums/1Jezw4Z2jKAhBF193bY5qM",
+    "id": "1Jezw4Z2jKAhBF193bY5qM",
+    "images": [
+      {
+        "height": 640,
+        "url": "https://i.scdn.co/image/ab67616d0000b2732ba4ba8001046f4d7c48fd19",
+        "width": 640
+      },
+      {
+        "height": 300,
+        "url": "https://i.scdn.co/image/ab67616d00001e022ba4ba8001046f4d7c48fd19",
+        "width": 300
+      },
+      {
+        "height": 64,
+        "url": "https://i.scdn.co/image/ab67616d000048512ba4ba8001046f4d7c48fd19",
+        "width": 64
+      }
+    ],
+    "is_playable": true,
+    "name": "EVEN MORE D4TA",
+    "release_date": "2023-03-17",
+    "release_date_precision": "day",
+    "total_tracks": 10,
+    "type": "album",
+    "uri": "spotify:album:1Jezw4Z2jKAhBF193bY5qM"
+  },
+  {
+    "album_group": "album",
+    "album_type": "album",
+    "artists": [
+      {
+        "external_urls": {
+          "spotify": "https://open.spotify.com/artist/2exkZbmNqMKnT8LRWuxWgy"
+        },
+        "href": "https://api.spotify.com/v1/artists/2exkZbmNqMKnT8LRWuxWgy",
+        "id": "2exkZbmNqMKnT8LRWuxWgy",
+        "name": "Moderat",
+        "type": "artist",
+        "uri": "spotify:artist:2exkZbmNqMKnT8LRWuxWgy"
+      }
+    ],
+    "external_urls": {
+      "spotify": "https://open.spotify.com/album/7coOKcB1fDcYvLG1OTv4Dz"
+    },
+    "href": "https://api.spotify.com/v1/albums/7coOKcB1fDcYvLG1OTv4Dz",
+    "id": "7coOKcB1fDcYvLG1OTv4Dz",
+    "images": [
+      {
+        "height": 640,
+        "url": "https://i.scdn.co/image/ab67616d0000b273370bd5f81f88ca7d7b05ec43",
+        "width": 640
+      },
+      {
+        "height": 300,
+        "url": "https://i.scdn.co/image/ab67616d00001e02370bd5f81f88ca7d7b05ec43",
+        "width": 300
+      },
+      {
+        "height": 64,
+        "url": "https://i.scdn.co/image/ab67616d00004851370bd5f81f88ca7d7b05ec43",
+        "width": 64
+      }
+    ],
+    "is_playable": true,
+    "name": "MORE D4TA",
+    "release_date": "2022-05-13",
+    "release_date_precision": "day",
+    "total_tracks": 10,
+    "type": "album",
+    "uri": "spotify:album:7coOKcB1fDcYvLG1OTv4Dz"
+  },
+  {
+    "album_group": "album",
+    "album_type": "album",
+    "artists": [
+      {
+        "external_urls": {
+          "spotify": "https://open.spotify.com/artist/2exkZbmNqMKnT8LRWuxWgy"
+        },
+        "href": "https://api.spotify.com/v1/artists/2exkZbmNqMKnT8LRWuxWgy",
+        "id": "2exkZbmNqMKnT8LRWuxWgy",
+        "name": "Moderat",
+        "type": "artist",
+        "uri": "spotify:artist:2exkZbmNqMKnT8LRWuxWgy"
+      }
+    ],
+    "external_urls": {
+      "spotify": "https://open.spotify.com/album/1NikusMVFuEvNxrx2AfmC0"
+    },
+    "href": "https://api.spotify.com/v1/albums/1NikusMVFuEvNxrx2AfmC0",
+    "id": "1NikusMVFuEvNxrx2AfmC0",
+    "images": [
+      {
+        "height": 640,
+        "url": "https://i.scdn.co/image/ab67616d0000b2737d40308eaa81b5e5f5ee2042",
+        "width": 640
+      },
+      {
+        "height": 300,
+        "url": "https://i.scdn.co/image/ab67616d00001e027d40308eaa81b5e5f5ee2042",
+        "width": 300
+      },
+      {
+        "height": 64,
+        "url": "https://i.scdn.co/image/ab67616d000048517d40308eaa81b5e5f5ee2042",
+        "width": 64
+      }
+    ],
+    "is_playable": true,
+    "name": "Live",
+    "release_date": "2016-11-25",
+    "release_date_precision": "day",
+    "total_tracks": 15,
+    "type": "album",
+    "uri": "spotify:album:1NikusMVFuEvNxrx2AfmC0"
+  },
+  {
+    "album_group": "album",
+    "album_type": "album",
+    "artists": [
+      {
+        "external_urls": {
+          "spotify": "https://open.spotify.com/artist/2exkZbmNqMKnT8LRWuxWgy"
+        },
+        "href": "https://api.spotify.com/v1/artists/2exkZbmNqMKnT8LRWuxWgy",
+        "id": "2exkZbmNqMKnT8LRWuxWgy",
+        "name": "Moderat",
+        "type": "artist",
+        "uri": "spotify:artist:2exkZbmNqMKnT8LRWuxWgy"
+      }
+    ],
+    "external_urls": {
+      "spotify": "https://open.spotify.com/album/0lelIbxdFvpRiJQFaMdrg3"
+    },
+    "href": "https://api.spotify.com/v1/albums/0lelIbxdFvpRiJQFaMdrg3",
+    "id": "0lelIbxdFvpRiJQFaMdrg3",
+    "images": [
+      {
+        "height": 640,
+        "url": "https://i.scdn.co/image/ab67616d0000b273cc8f1412d87aa8fb3fa8aa21",
+        "width": 640
+      },
+      {
+        "height": 300,
+        "url": "https://i.scdn.co/image/ab67616d00001e02cc8f1412d87aa8fb3fa8aa21",
+        "width": 300
+      },
+      {
+        "height": 64,
+        "url": "https://i.scdn.co/image/ab67616d00004851cc8f1412d87aa8fb3fa8aa21",
+        "width": 64
+      }
+    ],
+    "is_playable": true,
+    "name": "III",
+    "release_date": "2016-04-01",
+    "release_date_precision": "day",
+    "total_tracks": 9,
+    "type": "album",
+    "uri": "spotify:album:0lelIbxdFvpRiJQFaMdrg3"
+  },
+  {
+    "album_group": "album",
+    "album_type": "album",
+    "artists": [
+      {
+        "external_urls": {
+          "spotify": "https://open.spotify.com/artist/2exkZbmNqMKnT8LRWuxWgy"
+        },
+        "href": "https://api.spotify.com/v1/artists/2exkZbmNqMKnT8LRWuxWgy",
+        "id": "2exkZbmNqMKnT8LRWuxWgy",
+        "name": "Moderat",
+        "type": "artist",
+        "uri": "spotify:artist:2exkZbmNqMKnT8LRWuxWgy"
+      }
+    ],
+    "external_urls": {
+      "spotify": "https://open.spotify.com/album/3gUzNjMsadGGNMTbdIIWu1"
+    },
+    "href": "https://api.spotify.com/v1/albums/3gUzNjMsadGGNMTbdIIWu1",
+    "id": "3gUzNjMsadGGNMTbdIIWu1",
+    "images": [
+      {
+        "height": 640,
+        "url": "https://i.scdn.co/image/ab67616d0000b273942526477a8925e4970bcac9",
+        "width": 640
+      },
+      {
+        "height": 300,
+        "url": "https://i.scdn.co/image/ab67616d00001e02942526477a8925e4970bcac9",
+        "width": 300
+      },
+      {
+        "height": 64,
+        "url": "https://i.scdn.co/image/ab67616d00004851942526477a8925e4970bcac9",
+        "width": 64
+      }
+    ],
+    "is_playable": true,
+    "name": "III (Instrumentals)",
+    "release_date": "2016-03-31",
+    "release_date_precision": "day",
+    "total_tracks": 9,
+    "type": "album",
+    "uri": "spotify:album:3gUzNjMsadGGNMTbdIIWu1"
+  },
+  {
+    "album_group": "album",
+    "album_type": "album",
+    "artists": [
+      {
+        "external_urls": {
+          "spotify": "https://open.spotify.com/artist/2exkZbmNqMKnT8LRWuxWgy"
+        },
+        "href": "https://api.spotify.com/v1/artists/2exkZbmNqMKnT8LRWuxWgy",
+        "id": "2exkZbmNqMKnT8LRWuxWgy",
+        "name": "Moderat",
+        "type": "artist",
+        "uri": "spotify:artist:2exkZbmNqMKnT8LRWuxWgy"
+      }
+    ],
+    "external_urls": {
+      "spotify": "https://open.spotify.com/album/4FtCoZmsR1nmnrEwM2QA1X"
+    },
+    "href": "https://api.spotify.com/v1/albums/4FtCoZmsR1nmnrEwM2QA1X",
+    "id": "4FtCoZmsR1nmnrEwM2QA1X",
+    "images": [
+      {
+        "height": 640,
+        "url": "https://i.scdn.co/image/ab67616d0000b2733177d8903fac2063243b593a",
+        "width": 640
+      },
+      {
+        "height": 300,
+        "url": "https://i.scdn.co/image/ab67616d00001e023177d8903fac2063243b593a",
+        "width": 300
+      },
+      {
+        "height": 64,
+        "url": "https://i.scdn.co/image/ab67616d000048513177d8903fac2063243b593a",
+        "width": 64
+      }
+    ],
+    "is_playable": true,
+    "name": "III (Bonus Tracks & Remixes)",
+    "release_date": "2016-03-31",
+    "release_date_precision": "day",
+    "total_tracks": 10,
+    "type": "album",
+    "uri": "spotify:album:4FtCoZmsR1nmnrEwM2QA1X"
+  },
+  {
+    "album_group": "album",
+    "album_type": "album",
+    "artists": [
+      {
+        "external_urls": {
+          "spotify": "https://open.spotify.com/artist/2exkZbmNqMKnT8LRWuxWgy"
+        },
+        "href": "https://api.spotify.com/v1/artists/2exkZbmNqMKnT8LRWuxWgy",
+        "id": "2exkZbmNqMKnT8LRWuxWgy",
+        "name": "Moderat",
+        "type": "artist",
+        "uri": "spotify:artist:2exkZbmNqMKnT8LRWuxWgy"
+      }
+    ],
+    "external_urls": {
+      "spotify": "https://open.spotify.com/album/3WFNF1Hp0UBPswcawDHpUS"
+    },
+    "href": "https://api.spotify.com/v1/albums/3WFNF1Hp0UBPswcawDHpUS",
+    "id": "3WFNF1Hp0UBPswcawDHpUS",
+    "images": [
+      {
+        "height": 640,
+        "url": "https://i.scdn.co/image/ab67616d0000b2731e59786a357e89cac748f317",
+        "width": 640
+      },
+      {
+        "height": 300,
+        "url": "https://i.scdn.co/image/ab67616d00001e021e59786a357e89cac748f317",
+        "width": 300
+      },
+      {
+        "height": 64,
+        "url": "https://i.scdn.co/image/ab67616d000048511e59786a357e89cac748f317",
+        "width": 64
+      }
+    ],
+    "is_playable": true,
+    "name": "II",
+    "release_date": "2013-08-05",
+    "release_date_precision": "day",
+    "total_tracks": 11,
+    "type": "album",
+    "uri": "spotify:album:3WFNF1Hp0UBPswcawDHpUS"
+  },
+  {
+    "album_group": "album",
+    "album_type": "album",
+    "artists": [
+      {
+        "external_urls": {
+          "spotify": "https://open.spotify.com/artist/2jYMYP2SVifgmzNRQJx3SJ"
+        },
+        "href": "https://api.spotify.com/v1/artists/2jYMYP2SVifgmzNRQJx3SJ",
+        "id": "2jYMYP2SVifgmzNRQJx3SJ",
+        "name": "Modeselektor",
+        "type": "artist",
+        "uri": "spotify:artist:2jYMYP2SVifgmzNRQJx3SJ"
+      },
+      {
+        "external_urls": {
+          "spotify": "https://open.spotify.com/artist/2exkZbmNqMKnT8LRWuxWgy"
+        },
+        "href": "https://api.spotify.com/v1/artists/2exkZbmNqMKnT8LRWuxWgy",
+        "id": "2exkZbmNqMKnT8LRWuxWgy",
+        "name": "Moderat",
+        "type": "artist",
+        "uri": "spotify:artist:2exkZbmNqMKnT8LRWuxWgy"
+      }
+    ],
+    "external_urls": {
+      "spotify": "https://open.spotify.com/album/7IMAKY93W8XCLCxPNj7OKf"
+    },
+    "href": "https://api.spotify.com/v1/albums/7IMAKY93W8XCLCxPNj7OKf",
+    "id": "7IMAKY93W8XCLCxPNj7OKf",
+    "images": [
+      {
+        "height": 640,
+        "url": "https://i.scdn.co/image/ab67616d0000b27314b3d3e53a47816fa6ee49ed",
+        "width": 640
+      },
+      {
+        "height": 300,
+        "url": "https://i.scdn.co/image/ab67616d00001e0214b3d3e53a47816fa6ee49ed",
+        "width": 300
+      },
+      {
+        "height": 64,
+        "url": "https://i.scdn.co/image/ab67616d0000485114b3d3e53a47816fa6ee49ed",
+        "width": 64
+      }
+    ],
+    "is_playable": true,
+    "name": "50 Weapons of Choice # 2-9",
+    "release_date": "2010-08-27",
+    "release_date_precision": "day",
+    "total_tracks": 8,
+    "type": "album",
+    "uri": "spotify:album:7IMAKY93W8XCLCxPNj7OKf"
+  },
+  {
+    "album_group": "album",
+    "album_type": "album",
+    "artists": [
+      {
+        "external_urls": {
+          "spotify": "https://open.spotify.com/artist/2exkZbmNqMKnT8LRWuxWgy"
+        },
+        "href": "https://api.spotify.com/v1/artists/2exkZbmNqMKnT8LRWuxWgy",
+        "id": "2exkZbmNqMKnT8LRWuxWgy",
+        "name": "Moderat",
+        "type": "artist",
+        "uri": "spotify:artist:2exkZbmNqMKnT8LRWuxWgy"
+      }
+    ],
+    "external_urls": {
+      "spotify": "https://open.spotify.com/album/2HEh23ogCT3wiYfag2iMxD"
+    },
+    "href": "https://api.spotify.com/v1/albums/2HEh23ogCT3wiYfag2iMxD",
+    "id": "2HEh23ogCT3wiYfag2iMxD",
+    "images": [
+      {
+        "height": 640,
+        "url": "https://i.scdn.co/image/ab67616d0000b27327ce0e73b9cf23e8e22ebfe4",
+        "width": 640
+      },
+      {
+        "height": 300,
+        "url": "https://i.scdn.co/image/ab67616d00001e0227ce0e73b9cf23e8e22ebfe4",
+        "width": 300
+      },
+      {
+        "height": 64,
+        "url": "https://i.scdn.co/image/ab67616d0000485127ce0e73b9cf23e8e22ebfe4",
+        "width": 64
+      }
+    ],
+    "is_playable": true,
+    "name": "Moderat",
+    "release_date": "2009-05-11",
+    "release_date_precision": "day",
+    "total_tracks": 15,
+    "type": "album",
+    "uri": "spotify:album:2HEh23ogCT3wiYfag2iMxD"
+  },
+  {
+    "album_group": "single",
+    "album_type": "single",
+    "artists": [
+      {
+        "external_urls": {
+          "spotify": "https://open.spotify.com/artist/2exkZbmNqMKnT8LRWuxWgy"
+        },
+        "href": "https://api.spotify.com/v1/artists/2exkZbmNqMKnT8LRWuxWgy",
+        "id": "2exkZbmNqMKnT8LRWuxWgy",
+        "name": "Moderat",
+        "type": "artist",
+        "uri": "spotify:artist:2exkZbmNqMKnT8LRWuxWgy"
+      },
+      {
+        "external_urls": {
+          "spotify": "https://open.spotify.com/artist/08jywfUS0hp8XYlYs0cvz8"
+        },
+        "href": "https://api.spotify.com/v1/artists/08jywfUS0hp8XYlYs0cvz8",
+        "id": "08jywfUS0hp8XYlYs0cvz8",
+        "name": "Rampa",
+        "type": "artist",
+        "uri": "spotify:artist:08jywfUS0hp8XYlYs0cvz8"
+      },
+      {
+        "external_urls": {
+          "spotify": "https://open.spotify.com/artist/5mIowAJMp7RKNheelruV5z"
+        },
+        "href": "https://api.spotify.com/v1/artists/5mIowAJMp7RKNheelruV5z",
+        "id": "5mIowAJMp7RKNheelruV5z",
+        "name": "&ME",
+        "type": "artist",
+        "uri": "spotify:artist:5mIowAJMp7RKNheelruV5z"
+      }
+    ],
+    "external_urls": {
+      "spotify": "https://open.spotify.com/album/4ml88dBgRFbbucUERI1BYC"
+    },
+    "href": "https://api.spotify.com/v1/albums/4ml88dBgRFbbucUERI1BYC",
+    "id": "4ml88dBgRFbbucUERI1BYC",
+    "images": [
+      {
+        "height": 640,
+        "url": "https://i.scdn.co/image/ab67616d0000b273e0cc562977affaa7477aab6b",
+        "width": 640
+      },
+      {
+        "height": 300,
+        "url": "https://i.scdn.co/image/ab67616d00001e02e0cc562977affaa7477aab6b",
+        "width": 300
+      },
+      {
+        "height": 64,
+        "url": "https://i.scdn.co/image/ab67616d00004851e0cc562977affaa7477aab6b",
+        "width": 64
+      }
+    ],
+    "is_playable": true,
+    "name": "More Love (Rampa &ME Remix)",
+    "release_date": "2023-10-27",
+    "release_date_precision": "day",
+    "total_tracks": 1,
+    "type": "album",
+    "uri": "spotify:album:4ml88dBgRFbbucUERI1BYC"
+  },
+  {
+    "album_group": "single",
+    "album_type": "single",
+    "artists": [
+      {
+        "external_urls": {
+          "spotify": "https://open.spotify.com/artist/2exkZbmNqMKnT8LRWuxWgy"
+        },
+        "href": "https://api.spotify.com/v1/artists/2exkZbmNqMKnT8LRWuxWgy",
+        "id": "2exkZbmNqMKnT8LRWuxWgy",
+        "name": "Moderat",
+        "type": "artist",
+        "uri": "spotify:artist:2exkZbmNqMKnT8LRWuxWgy"
+      },
+      {
+        "external_urls": {
+          "spotify": "https://open.spotify.com/artist/2EFsfh1zewsSWhDINv7j1I"
+        },
+        "href": "https://api.spotify.com/v1/artists/2EFsfh1zewsSWhDINv7j1I",
+        "id": "2EFsfh1zewsSWhDINv7j1I",
+        "name": "Logic1000",
+        "type": "artist",
+        "uri": "spotify:artist:2EFsfh1zewsSWhDINv7j1I"
+      },
+      {
+        "external_urls": {
+          "spotify": "https://open.spotify.com/artist/6S6PrVKF41V5qJxz4fZB56"
+        },
+        "href": "https://api.spotify.com/v1/artists/6S6PrVKF41V5qJxz4fZB56",
+        "id": "6S6PrVKF41V5qJxz4fZB56",
+        "name": "Big Ever",
+        "type": "artist",
+        "uri": "spotify:artist:6S6PrVKF41V5qJxz4fZB56"
+      }
+    ],
+    "external_urls": {
+      "spotify": "https://open.spotify.com/album/3fVnUAAyQFgv8LhjtSKMDs"
+    },
+    "href": "https://api.spotify.com/v1/albums/3fVnUAAyQFgv8LhjtSKMDs",
+    "id": "3fVnUAAyQFgv8LhjtSKMDs",
+    "images": [
+      {
+        "height": 640,
+        "url": "https://i.scdn.co/image/ab67616d0000b273d0d315541afdb2e1ccf54129",
+        "width": 640
+      },
+      {
+        "height": 300,
+        "url": "https://i.scdn.co/image/ab67616d00001e02d0d315541afdb2e1ccf54129",
+        "width": 300
+      },
+      {
+        "height": 64,
+        "url": "https://i.scdn.co/image/ab67616d00004851d0d315541afdb2e1ccf54129",
+        "width": 64
+      }
+    ],
+    "is_playable": true,
+    "name": "COPY COPY (Logic1000 & Big Ever Remix)",
+    "release_date": "2023-02-09",
+    "release_date_precision": "day",
+    "total_tracks": 1,
+    "type": "album",
+    "uri": "spotify:album:3fVnUAAyQFgv8LhjtSKMDs"
+  },
+  {
+    "album_group": "single",
+    "album_type": "single",
+    "artists": [
+      {
+        "external_urls": {
+          "spotify": "https://open.spotify.com/artist/2exkZbmNqMKnT8LRWuxWgy"
+        },
+        "href": "https://api.spotify.com/v1/artists/2exkZbmNqMKnT8LRWuxWgy",
+        "id": "2exkZbmNqMKnT8LRWuxWgy",
+        "name": "Moderat",
+        "type": "artist",
+        "uri": "spotify:artist:2exkZbmNqMKnT8LRWuxWgy"
+      },
+      {
+        "external_urls": {
+          "spotify": "https://open.spotify.com/artist/7xJVICbAWizNBKBD3mRWjF"
+        },
+        "href": "https://api.spotify.com/v1/artists/7xJVICbAWizNBKBD3mRWjF",
+        "id": "7xJVICbAWizNBKBD3mRWjF",
+        "name": "Marie Davidson",
+        "type": "artist",
+        "uri": "spotify:artist:7xJVICbAWizNBKBD3mRWjF"
+      }
+    ],
+    "external_urls": {
+      "spotify": "https://open.spotify.com/album/7nG8yRa7MCdRfkjNE3KeIp"
+    },
+    "href": "https://api.spotify.com/v1/albums/7nG8yRa7MCdRfkjNE3KeIp",
+    "id": "7nG8yRa7MCdRfkjNE3KeIp",
+    "images": [
+      {
+        "height": 640,
+        "url": "https://i.scdn.co/image/ab67616d0000b27301f7166c881f651aed81e522",
+        "width": 640
+      },
+      {
+        "height": 300,
+        "url": "https://i.scdn.co/image/ab67616d00001e0201f7166c881f651aed81e522",
+        "width": 300
+      },
+      {
+        "height": 64,
+        "url": "https://i.scdn.co/image/ab67616d0000485101f7166c881f651aed81e522",
+        "width": 64
+      }
+    ],
+    "is_playable": true,
+    "name": "FAST LAND (Marie Davidson Remix)",
+    "release_date": "2023-01-19",
+    "release_date_precision": "day",
+    "total_tracks": 1,
+    "type": "album",
+    "uri": "spotify:album:7nG8yRa7MCdRfkjNE3KeIp"
+  },
+  {
+    "album_group": "single",
+    "album_type": "single",
+    "artists": [
+      {
+        "external_urls": {
+          "spotify": "https://open.spotify.com/artist/2exkZbmNqMKnT8LRWuxWgy"
+        },
+        "href": "https://api.spotify.com/v1/artists/2exkZbmNqMKnT8LRWuxWgy",
+        "id": "2exkZbmNqMKnT8LRWuxWgy",
+        "name": "Moderat",
+        "type": "artist",
+        "uri": "spotify:artist:2exkZbmNqMKnT8LRWuxWgy"
+      }
+    ],
+    "external_urls": {
+      "spotify": "https://open.spotify.com/album/3xFuqSyFHEMJOsNpLfoFkN"
+    },
+    "href": "https://api.spotify.com/v1/albums/3xFuqSyFHEMJOsNpLfoFkN",
+    "id": "3xFuqSyFHEMJOsNpLfoFkN",
+    "images": [
+      {
+        "height": 640,
+        "url": "https://i.scdn.co/image/ab67616d0000b273032eee2416d9bcfc0044b0af",
+        "width": 640
+      },
+      {
+        "height": 300,
+        "url": "https://i.scdn.co/image/ab67616d00001e02032eee2416d9bcfc0044b0af",
+        "width": 300
+      },
+      {
+        "height": 64,
+        "url": "https://i.scdn.co/image/ab67616d00004851032eee2416d9bcfc0044b0af",
+        "width": 64
+      }
+    ],
+    "is_playable": true,
+    "name": "MORE LOVE",
+    "release_date": "2022-04-01",
+    "release_date_precision": "day",
+    "total_tracks": 1,
+    "type": "album",
+    "uri": "spotify:album:3xFuqSyFHEMJOsNpLfoFkN"
+  },
+  {
+    "album_group": "single",
+    "album_type": "single",
+    "artists": [
+      {
+        "external_urls": {
+          "spotify": "https://open.spotify.com/artist/2exkZbmNqMKnT8LRWuxWgy"
+        },
+        "href": "https://api.spotify.com/v1/artists/2exkZbmNqMKnT8LRWuxWgy",
+        "id": "2exkZbmNqMKnT8LRWuxWgy",
+        "name": "Moderat",
+        "type": "artist",
+        "uri": "spotify:artist:2exkZbmNqMKnT8LRWuxWgy"
+      }
+    ],
+    "external_urls": {
+      "spotify": "https://open.spotify.com/album/6SgBjMIkTJY0JcSswGQBhL"
+    },
+    "href": "https://api.spotify.com/v1/albums/6SgBjMIkTJY0JcSswGQBhL",
+    "id": "6SgBjMIkTJY0JcSswGQBhL",
+    "images": [
+      {
+        "height": 640,
+        "url": "https://i.scdn.co/image/ab67616d0000b27396a7499f583fb7c2e799f7da",
+        "width": 640
+      },
+      {
+        "height": 300,
+        "url": "https://i.scdn.co/image/ab67616d00001e0296a7499f583fb7c2e799f7da",
+        "width": 300
+      },
+      {
+        "height": 64,
+        "url": "https://i.scdn.co/image/ab67616d0000485196a7499f583fb7c2e799f7da",
+        "width": 64
+      }
+    ],
+    "is_playable": true,
+    "name": "EASY PREY",
+    "release_date": "2022-03-11",
+    "release_date_precision": "day",
+    "total_tracks": 1,
+    "type": "album",
+    "uri": "spotify:album:6SgBjMIkTJY0JcSswGQBhL"
+  },
+  {
+    "album_group": "single",
+    "album_type": "single",
+    "artists": [
+      {
+        "external_urls": {
+          "spotify": "https://open.spotify.com/artist/2exkZbmNqMKnT8LRWuxWgy"
+        },
+        "href": "https://api.spotify.com/v1/artists/2exkZbmNqMKnT8LRWuxWgy",
+        "id": "2exkZbmNqMKnT8LRWuxWgy",
+        "name": "Moderat",
+        "type": "artist",
+        "uri": "spotify:artist:2exkZbmNqMKnT8LRWuxWgy"
+      }
+    ],
+    "external_urls": {
+      "spotify": "https://open.spotify.com/album/0qHip7q5wsZ8gg1nrl8SGk"
+    },
+    "href": "https://api.spotify.com/v1/albums/0qHip7q5wsZ8gg1nrl8SGk",
+    "id": "0qHip7q5wsZ8gg1nrl8SGk",
+    "images": [
+      {
+        "height": 640,
+        "url": "https://i.scdn.co/image/ab67616d0000b2739749e4daa764f437a2233e02",
+        "width": 640
+      },
+      {
+        "height": 300,
+        "url": "https://i.scdn.co/image/ab67616d00001e029749e4daa764f437a2233e02",
+        "width": 300
+      },
+      {
+        "height": 64,
+        "url": "https://i.scdn.co/image/ab67616d000048519749e4daa764f437a2233e02",
+        "width": 64
+      }
+    ],
+    "is_playable": true,
+    "name": "FAST LAND",
+    "release_date": "2022-02-11",
+    "release_date_precision": "day",
+    "total_tracks": 1,
+    "type": "album",
+    "uri": "spotify:album:0qHip7q5wsZ8gg1nrl8SGk"
+  },
+  {
+    "album_group": "single",
+    "album_type": "single",
+    "artists": [
+      {
+        "external_urls": {
+          "spotify": "https://open.spotify.com/artist/2exkZbmNqMKnT8LRWuxWgy"
+        },
+        "href": "https://api.spotify.com/v1/artists/2exkZbmNqMKnT8LRWuxWgy",
+        "id": "2exkZbmNqMKnT8LRWuxWgy",
+        "name": "Moderat",
+        "type": "artist",
+        "uri": "spotify:artist:2exkZbmNqMKnT8LRWuxWgy"
+      }
+    ],
+    "external_urls": {
+      "spotify": "https://open.spotify.com/album/4MRRtRw8960PGz29ZUsj89"
+    },
+    "href": "https://api.spotify.com/v1/albums/4MRRtRw8960PGz29ZUsj89",
+    "id": "4MRRtRw8960PGz29ZUsj89",
+    "images": [
+      {
+        "height": 640,
+        "url": "https://i.scdn.co/image/ab67616d0000b273b5acd551bf30e5d3c26af3d9",
+        "width": 640
+      },
+      {
+        "height": 300,
+        "url": "https://i.scdn.co/image/ab67616d00001e02b5acd551bf30e5d3c26af3d9",
+        "width": 300
+      },
+      {
+        "height": 64,
+        "url": "https://i.scdn.co/image/ab67616d00004851b5acd551bf30e5d3c26af3d9",
+        "width": 64
+      }
+    ],
+    "is_playable": true,
+    "name": "Ghostmother (Live)",
+    "release_date": "2016-11-04",
+    "release_date_precision": "day",
+    "total_tracks": 1,
+    "type": "album",
+    "uri": "spotify:album:4MRRtRw8960PGz29ZUsj89"
+  },
+  {
+    "album_group": "single",
+    "album_type": "single",
+    "artists": [
+      {
+        "external_urls": {
+          "spotify": "https://open.spotify.com/artist/2exkZbmNqMKnT8LRWuxWgy"
+        },
+        "href": "https://api.spotify.com/v1/artists/2exkZbmNqMKnT8LRWuxWgy",
+        "id": "2exkZbmNqMKnT8LRWuxWgy",
+        "name": "Moderat",
+        "type": "artist",
+        "uri": "spotify:artist:2exkZbmNqMKnT8LRWuxWgy"
+      }
+    ],
+    "external_urls": {
+      "spotify": "https://open.spotify.com/album/6pV8g7V6BDxVY3SBsvlTl4"
+    },
+    "href": "https://api.spotify.com/v1/albums/6pV8g7V6BDxVY3SBsvlTl4",
+    "id": "6pV8g7V6BDxVY3SBsvlTl4",
+    "images": [
+      {
+        "height": 640,
+        "url": "https://i.scdn.co/image/ab67616d0000b2733110e4fe98974f68e1f809d1",
+        "width": 640
+      },
+      {
+        "height": 300,
+        "url": "https://i.scdn.co/image/ab67616d00001e023110e4fe98974f68e1f809d1",
+        "width": 300
+      },
+      {
+        "height": 64,
+        "url": "https://i.scdn.co/image/ab67616d000048513110e4fe98974f68e1f809d1",
+        "width": 64
+      }
+    ],
+    "is_playable": true,
+    "name": "Eating Hooks",
+    "release_date": "2016-10-07",
+    "release_date_precision": "day",
+    "total_tracks": 4,
+    "type": "album",
+    "uri": "spotify:album:6pV8g7V6BDxVY3SBsvlTl4"
+  },
+  {
+    "album_group": "single",
+    "album_type": "single",
+    "artists": [
+      {
+        "external_urls": {
+          "spotify": "https://open.spotify.com/artist/2exkZbmNqMKnT8LRWuxWgy"
+        },
+        "href": "https://api.spotify.com/v1/artists/2exkZbmNqMKnT8LRWuxWgy",
+        "id": "2exkZbmNqMKnT8LRWuxWgy",
+        "name": "Moderat",
+        "type": "artist",
+        "uri": "spotify:artist:2exkZbmNqMKnT8LRWuxWgy"
+      }
+    ],
+    "external_urls": {
+      "spotify": "https://open.spotify.com/album/2xbd9WDRoPucfqYqdM9WtX"
+    },
+    "href": "https://api.spotify.com/v1/albums/2xbd9WDRoPucfqYqdM9WtX",
+    "id": "2xbd9WDRoPucfqYqdM9WtX",
+    "images": [
+      {
+        "height": 640,
+        "url": "https://i.scdn.co/image/ab67616d0000b27314bdf9e251b10346850ac9b5",
+        "width": 640
+      },
+      {
+        "height": 300,
+        "url": "https://i.scdn.co/image/ab67616d00001e0214bdf9e251b10346850ac9b5",
+        "width": 300
+      },
+      {
+        "height": 64,
+        "url": "https://i.scdn.co/image/ab67616d0000485114bdf9e251b10346850ac9b5",
+        "width": 64
+      }
+    ],
+    "is_playable": true,
+    "name": "Eating Hooks (Siriusmo Remix - Solomun Edit)",
+    "release_date": "2016-09-28",
+    "release_date_precision": "day",
+    "total_tracks": 1,
+    "type": "album",
+    "uri": "spotify:album:2xbd9WDRoPucfqYqdM9WtX"
+  },
+  {
+    "album_group": "single",
+    "album_type": "single",
+    "artists": [
+      {
+        "external_urls": {
+          "spotify": "https://open.spotify.com/artist/2exkZbmNqMKnT8LRWuxWgy"
+        },
+        "href": "https://api.spotify.com/v1/artists/2exkZbmNqMKnT8LRWuxWgy",
+        "id": "2exkZbmNqMKnT8LRWuxWgy",
+        "name": "Moderat",
+        "type": "artist",
+        "uri": "spotify:artist:2exkZbmNqMKnT8LRWuxWgy"
+      },
+      {
+        "external_urls": {
+          "spotify": "https://open.spotify.com/artist/5muFO8VqYRCRW13EkvX564"
+        },
+        "href": "https://api.spotify.com/v1/artists/5muFO8VqYRCRW13EkvX564",
+        "id": "5muFO8VqYRCRW13EkvX564",
+        "name": "\u00c2me",
+        "type": "artist",
+        "uri": "spotify:artist:5muFO8VqYRCRW13EkvX564"
+      }
+    ],
+    "external_urls": {
+      "spotify": "https://open.spotify.com/album/7yDOv0elwPkqXzmhkRKdBG"
+    },
+    "href": "https://api.spotify.com/v1/albums/7yDOv0elwPkqXzmhkRKdBG",
+    "id": "7yDOv0elwPkqXzmhkRKdBG",
+    "images": [
+      {
+        "height": 640,
+        "url": "https://i.scdn.co/image/ab67616d0000b2733fd68c9b4b60c6c844ee7c17",
+        "width": 640
+      },
+      {
+        "height": 300,
+        "url": "https://i.scdn.co/image/ab67616d00001e023fd68c9b4b60c6c844ee7c17",
+        "width": 300
+      },
+      {
+        "height": 64,
+        "url": "https://i.scdn.co/image/ab67616d000048513fd68c9b4b60c6c844ee7c17",
+        "width": 64
+      }
+    ],
+    "is_playable": true,
+    "name": "Running (\u00c2me Remix)",
+    "release_date": "2016-07-22",
+    "release_date_precision": "day",
+    "total_tracks": 1,
+    "type": "album",
+    "uri": "spotify:album:7yDOv0elwPkqXzmhkRKdBG"
+  }
+]
