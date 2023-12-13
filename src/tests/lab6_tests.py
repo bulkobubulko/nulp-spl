@@ -1,12 +1,14 @@
 import unittest
 
+from service.lab1.calculator_service import calculate_result
+
 class AdditionTestCase(unittest.TestCase):
     """
     A test case class for testing addition, subtraction, multiplication
     and division functions in the calculations module.
     """
     def setUp(self):
-        self.calculator = calculations
+        self.calculator = calculate_result
         self.first_number = 80
         self.second_number = 30
         

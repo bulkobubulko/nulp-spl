@@ -7,11 +7,5 @@ __pycache__/
 # VSCode
 .vscode/
 
-# Files
-draft.py
-
-# Report
-report/screenshots/
-*.docx
-
-source/utility
+README.md
+requirements.txt

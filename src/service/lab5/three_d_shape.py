@@ -1,9 +1,11 @@
-# Imports
+import os
 from math import sin, cos
 import time
 import json
 from colorama import Fore
 from colorama import init as colorama_init
+
+from shared.ascii_utils import set_color
 
 # Initialize colorama
 # autoreset=True -> Color settings will automatically reset after each print statement

@@ -1,37 +1,17 @@
-# Constants
+# To initialize colorama and configure its behavior
+from colorama import init as colorama_init
+
+from service.lab4.font8x8 import font8x8
+from shared.user_input_utils import get_phrase
+from shared.ascii_utils import check_size, preview_art
+
+# Initialize colorama
+# autoreset=True -> Color settings will automatically reset after each print statement
+colorama_init(autoreset=True)
+
 SPACE = 0
 SYMBOL = 1
 SHADOW = 2
-
-def settings(settings_obj):
-    while True:
-        print('Options:')
-        print('0. Show current settings')
-        print('1. Change size')
-        print('2. Change symbol')
-        print('3. Change color')
-        print('4. Change alignment')
-        print('5. Change 3D option')
-        print('6. Reset settings')
-        print('7. Back')
-        
-        user_input = input('Enter option number: ')
-        if user_input == '0':
-            settings_obj.show_settings()
-        elif user_input == '1':
-            settings_obj.set_size(*set_size())
-        elif user_input == '2':
-            settings_obj.set_symbols(*set_symbols())
-        elif user_input == '3':
-            settings_obj.set_color(set_color())
-        elif user_input == '4':
-            settings_obj.set_alignment(set_alignment())
-        elif user_input == '5':
-            settings_obj.set_3d_option(set_3d_option())
-        elif user_input == '6':
-            settings_obj.default_settings()
-        elif user_input == '7':
-            break
         
 def str_to_ascii_list(char_str):
     """Convert string to list of ASCII codes."""
@@ -162,10 +142,5 @@ def create_ascii_art(FOLDER_PATH, settings_obj):
             preview_art(FOLDER_PATH, art)
         except Exception as e:
             print(f"An error occurred while previewing the ASCII art: {str(e)}")
-            
-        change_settings = input('Do you want to change settings? (y/n): ')
-         
-        if change_settings == 'y':
-            settings(settings_obj)
         else:
             break

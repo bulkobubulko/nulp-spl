@@ -1,10 +1,14 @@
+from service.lab5.three_d_shape import ThreeDShape
+
 SETTINGS_FILE_PATH = 'data/lab5/settings.json'
 
 def main():
     shape_obj = ThreeDShape()
     shape_obj.set_settings_file_path(SETTINGS_FILE_PATH)
     shape_obj.load_settings()
-    
+    menu(shape_obj)
+        
+def menu(shape_obj):
     while True:
         print('\n')
         print('Options:')

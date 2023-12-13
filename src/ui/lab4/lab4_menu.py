@@ -1,6 +1,10 @@
-# Constants
-FOLDER_PATH = 'data/lab4/ASCII-arts/'
-SETTINGS_FILE_PATH = 'data/lab4/settings.json'
+from service.lab4.ascii_art_generator import create_ascii_art
+from shared.ascii_art_settings import AsciiArtSettings
+from shared.ascii_utils import show_art
+from ui.lab4.lab4_settings_menu import settings
+
+FOLDER_PATH = 'src/data/lab4/ASCII-arts/'
+SETTINGS_FILE_PATH = 'src/data/lab4/settings.json'
             
 def main():
     try: 

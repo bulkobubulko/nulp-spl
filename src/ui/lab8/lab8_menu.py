@@ -1,7 +1,9 @@
 import os
 
-FOLDER_PATH_PLOTS = 'data/lab8/plots/'
-FOLDER_PATH_DATASETS = 'data/lab8/datasets/'
+from service.lab8.data_preprocessing import DataExploration, DataCleaning, DataVisualization
+
+FOLDER_PATH_DATASETS = 'src/data/lab8/datasets/'
+FOLDER_PATH_PLOTS = 'src/data/lab8/plots/'
 
 # Checking if directories exist and creating them if not
 for directory in [FOLDER_PATH_PLOTS, FOLDER_PATH_DATASETS]:
@@ -15,7 +17,7 @@ def main():
     if user_input:
         csv_path = user_input
     else:
-        csv_path = 'sources/datasets/USA_Housing.csv'
+        csv_path = f'{FOLDER_PATH_DATASETS}USA_Housing.csv'
         print(f"Using default file path: {csv_path}")
 
     try:

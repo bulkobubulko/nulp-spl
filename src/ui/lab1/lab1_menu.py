@@ -1,6 +1,19 @@
-HISTORY_FILE = 'data/lab1/history.txt'
+from service.lab1.calculator_service import calculate_option
+from ui.lab1.lab1_settings_menu import settings_option
+from shared.calculator_settings import CalculatorSettings
+
+SETTINGS_FILE_PATH = 'src/data/lab1/calculator_settings.json'
+HISTORY_FILE = 'src/data/lab1/history.txt'
 
 def main():    
+    calculator_settings = CalculatorSettings()
+    calculator_settings.set_settings_file_path(SETTINGS_FILE_PATH)
+    calculator_settings.set_history_file_path(HISTORY_FILE)
+    calculator_settings.load_settings()
+    
+    menu(calculator_settings)
+    
+def menu(calculator_settings):
     while True:
         print("\nOptions:")
         print("1. Perform calculation")
@@ -8,15 +21,14 @@ def main():
         print("3. Quit")
         choice = input("Enter your choice (1/2/3): ")
         if choice == '1':
-            result = calculate_option()
-            save_result(result, HISTORY_FILE, number_of_calculations)
+            calculate_option(calculator_settings)
         elif choice == '2':
-            settings_option(HISTORY_FILE)
+            settings_option(calculator_settings)
         elif choice == '3':
-            print("Exiting the calculator. Goodbye!")
+            print("Exiting...")
             break
         else:
             print("Invalid choice. Please select a valid option (1/2/3).")
-
+    
 if __name__ == "__main__":
     main()

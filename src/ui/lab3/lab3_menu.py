@@ -1,5 +1,10 @@
-FOLDER_PATH = 'data/lab3/ASCII-arts/'
-SETTINGS_FILE_PATH = 'data/lab3/settings.json'
+from shared.ascii_art_settings import AsciiArtSettings
+from service.lab3.ascii_art_generator import create_ascii_art
+from ui.lab3.lab3_settings_menu import settings_menu
+from shared.ascii_utils import show_art
+
+FOLDER_PATH = 'src/data/lab3/ASCII-arts/'
+SETTINGS_FILE_PATH = 'src/data/lab3/settings.json'
 
 def main():    
     settings_obj = AsciiArtSettings()
@@ -20,9 +25,6 @@ def main():
         elif user_input == '2':
             show_art(FOLDER_PATH)
         elif user_input == '3':
-            settings(settings_obj)
+            settings_menu(settings_obj)
         elif user_input == '4':
             break
-    
-if __name__ == "__main__":
-    main()

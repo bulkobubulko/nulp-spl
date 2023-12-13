@@ -1,5 +1,9 @@
 from prettytable import PrettyTable
 
+from service.lab7.spotify_api import get_track_artist, get_track_album, get_track_duration, get_track_popularity, get_track_release_date, get_track_genres, get_track_explicit
+from service.lab7.spotify_api import get_artists_top_tracks, get_artists_albums, get_artists_related_artists, get_artist_followers, get_artist_genres
+from shared.data_utils import save_data
+
 FOLDER_PATH_OUTPUT = 'data/lab7/output/'
 
 def display_data(data, field_names, entity_name):

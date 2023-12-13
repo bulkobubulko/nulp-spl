@@ -1,7 +1,13 @@
+from service.lab7.spotify_api import get_token
+from service.lab7.user_input_handling import search_for_artist_api, search_for_track_api
+from shared.data_utils import view_user_history
 FOLDER_PATH_USER_LOGS = 'data/lab7/user_logs.log'
               
 def main():
     token = get_token()
+    menu(token)
+    
+def menu(token):
     while True:
         print("\nMAIN MENU")
         print("Options:")
@@ -13,9 +19,9 @@ def main():
         user_input = input("Enter option: ")
         
         if user_input == '1':
-            search_for_artist_menu(token)
+            search_for_artist_api(token)
         elif user_input == '2':
-            search_for_track_menu(token)
+            search_for_track_api(token)
         elif user_input == '3':
             print("User history:")
             view_user_history(FOLDER_PATH_USER_LOGS)
