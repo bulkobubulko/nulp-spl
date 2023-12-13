@@ -1,5 +1,4 @@
 import unittest
-from spotify_api import get_token, get_auth_token  
 
 class TestLab7(unittest.TestCase):
     def test_get_token(self):
