@@ -1,20 +1,9 @@
-# Include the parent directory in the system's import path
-import sys
-import os
-
-current_dir = os.path.dirname(os.path.abspath(__file__))
-parent_dir = os.path.abspath(os.path.join(current_dir, '..'))
-sys.path.append(parent_dir)
-
-from lab5.three_d_shape import ThreeDShape
-
-SETTINGS_FILE_PATH = 'source/lab5/settings.json'
+SETTINGS_FILE_PATH = 'data/lab5/settings.json'
 
 def main():
     shape_obj = ThreeDShape()
     shape_obj.set_settings_file_path(SETTINGS_FILE_PATH)
     shape_obj.load_settings()
-    # shape_obj.render_3d_shape()
     
     while True:
         print('\n')

@@ -1,17 +1,7 @@
-import sys
 import os
 
-# Include the parent directory in the system's import path
-current_dir = os.path.dirname(os.path.abspath(__file__))
-parent_dir = os.path.abspath(os.path.join(current_dir, '..'))
-sys.path.append(parent_dir)   
-
-from lab8.data_preprocessing import DataExploration
-from lab8.data_preprocessing import DataCleaning
-from lab8.data_preprocessing import DataVisualization
-
-FOLDER_PATH_PLOTS = 'source/lab8/plots/'
-FOLDER_PATH_DATASETS = 'source/lab8/datasets/'
+FOLDER_PATH_PLOTS = 'data/lab8/plots/'
+FOLDER_PATH_DATASETS = 'data/lab8/datasets/'
 
 # Checking if directories exist and creating them if not
 for directory in [FOLDER_PATH_PLOTS, FOLDER_PATH_DATASETS]:
@@ -25,7 +15,7 @@ def main():
     if user_input:
         csv_path = user_input
     else:
-        csv_path = 'source/lab8/datasets/USA_Housing.csv'
+        csv_path = 'sources/datasets/USA_Housing.csv'
         print(f"Using default file path: {csv_path}")
 
     try:

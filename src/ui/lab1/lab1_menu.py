@@ -1,17 +1,4 @@
-# Include the parent directory in the system's import path
-import sys
-import os
-
-current_dir = os.path.dirname(os.path.abspath(__file__))
-parent_dir = os.path.abspath(os.path.join(current_dir, '..'))
-sys.path.append(parent_dir)
-
-# Import functions from console_calculator.py
-from lab1.history_handling import save_result
-from lab1.console_calculator import calculate_option, settings_option
-from lab1.console_calculator import number_of_calculations
-
-HISTORY_FILE = 'source/lab1/history.txt'
+HISTORY_FILE = 'data/lab1/history.txt'
 
 def main():    
     while True:

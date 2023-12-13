@@ -11,7 +11,7 @@ class Runner:
     @staticmethod   
     def run_lab(lab_number):
         """Run the selected lab."""
-        module_name = f"source.lab{lab_number}.main"
+        module_name = f"..src.lab{lab_number}.main"
 
         try:
             # Import the 'main' function from the lab module

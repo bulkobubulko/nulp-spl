@@ -1,19 +1,6 @@
-# Include the parent directory in the system's import path
-import sys
-import os
-
-current_dir = os.path.dirname(os.path.abspath(__file__))
-parent_dir = os.path.abspath(os.path.join(current_dir, '..'))
-sys.path.append(parent_dir)
-
-# Imports
-from lab3.ascii_art_settings import AsciiArtSettings
-from lab3.ascii_art_generator import show_art
-from lab4.ascii_art_generator import settings, create_ascii_art
-
 # Constants
-FOLDER_PATH = 'source/lab4/ASCII-arts/'
-SETTINGS_FILE_PATH = 'source/lab4/settings.json'
+FOLDER_PATH = 'data/lab4/ASCII-arts/'
+SETTINGS_FILE_PATH = 'data/lab4/settings.json'
             
 def main():
     try: 
