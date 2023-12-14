@@ -1,7 +1,7 @@
 # To initialize colorama and configure its behavior
 from colorama import init as colorama_init
 
-from service.lab4.font8x8 import font8x8
+from service.lab4.font8x8 import font8x8, font8x8_ukr
 from shared.user_input_utils import get_phrase
 from shared.ascii_utils import check_size, preview_art
 
@@ -77,13 +77,24 @@ def align(alignment, width, row_string):
         
     return left_padding  
 
-def render(char_str, color, regular_symbol, shadow_symbol, width, height, alignment, threed):
+def render(char_str, color, regular_symbol, shadow_symbol, width, height, alignment, threed, language):
     """Render ASCII-art."""
     char_width = 8
     char_height = 8
     art = ""
     
-    ascii_list = str_to_ascii_list(char_str)
+    if language == 'en':
+        font = font8x8
+        ascii_list = str_to_ascii_list(char_str)
+    elif language == 'ukr':
+        font = font8x8_ukr
+        ascii_list = []
+        for item in char_str:
+            if item == "І" or item == "і":
+                ascii_list.append(0)
+            elif item == "Д" or item == "д":
+                ascii_list.append(1)
+    
     lines = set_lines(ascii_list, width)
       
     for line in lines:
@@ -92,7 +103,7 @@ def render(char_str, color, regular_symbol, shadow_symbol, width, height, alignm
             for char_item in range(len(line)):
                 set_bit_list = []                
                 for row_item in range(char_width):
-                    bitmap = font8x8[line[char_item]]
+                    bitmap = font[line[char_item]]
                     set_bit = (1 << row_item) & bitmap[column_item]
                     if set_bit:
                         set_bit_list.append(SYMBOL)
@@ -119,6 +130,9 @@ def create_ascii_art(FOLDER_PATH, settings_obj):
         FOLDER_PATH (str): Path to folder with ASCII-arts.
         settings_obj (AsciiArtSettings): Object with settings.
     """
+    # choose language en or uk
+    language = input("Choose language (en - English, ukr - Ukrainian): ")
+    
     char_str = get_phrase()
     width, height = settings_obj.size
     
@@ -136,8 +150,8 @@ def create_ascii_art(FOLDER_PATH, settings_obj):
                     settings_obj.size[0], 
                     settings_obj.size[1], 
                     settings_obj.alignment,
-                    settings_obj.is_3d)
-        
+                    settings_obj.is_3d,
+                    language)
         try:
             preview_art(FOLDER_PATH, art)
         except Exception as e:
