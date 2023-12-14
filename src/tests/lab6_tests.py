@@ -2,6 +2,7 @@ import unittest
 
 from service.lab1.calculator_service import calculate_result
 
+
 class AdditionTestCase(unittest.TestCase):
     """
     A test case class for testing addition, subtraction, multiplication

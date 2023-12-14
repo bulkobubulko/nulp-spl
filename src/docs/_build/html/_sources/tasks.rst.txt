@@ -1,0 +1,10 @@
+tasks package
+=============
+
+Module contents
+---------------
+
+.. automodule:: tasks
+   :members:
+   :undoc-members:
+   :show-inheritance:

@@ -1,14 +1,12 @@
 from service.lab1.calculator_service import calculate_option
 from ui.lab1.lab1_settings_menu import settings_option
 from shared.calculator_settings import CalculatorSettings
-
-SETTINGS_FILE_PATH = 'src/data/lab1/calculator_settings.json'
-HISTORY_FILE = 'src/data/lab1/history.txt'
+from config.path_config import SETTINGS_FILE_PATH_LAB1, HISTORY_FILE_LAB1
 
 def main():    
     calculator_settings = CalculatorSettings()
-    calculator_settings.set_settings_file_path(SETTINGS_FILE_PATH)
-    calculator_settings.set_history_file_path(HISTORY_FILE)
+    calculator_settings.set_settings_file_path(SETTINGS_FILE_PATH_LAB1)
+    calculator_settings.set_history_file_path(HISTORY_FILE_LAB1)
     calculator_settings.load_settings()
     
     menu(calculator_settings)

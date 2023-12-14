@@ -11,22 +11,30 @@ class Runner:
     @staticmethod   
     def run_lab(lab_number):
         """Run the selected lab."""
-        module_name = f"ui.lab{lab_number}_menu"
+        while True:
+            try:
+                # Check if lab is a test suite
+                if lab_number == 6:
+                    print(f"Lab {lab_number} is a test suite. Please run the test suite instead.")
+                    break
 
-        try:
-            # Import the 'main' function from the lab module
-            main_module = importlib.import_module(module_name)
-            main_function = getattr(main_module, "main")
+                # Import the 'main' function from the lab module
+                module_name = f"ui.lab{lab_number}.lab{lab_number}_menu"
+                main_module = importlib.import_module(module_name)
+                main_function = getattr(main_module, "main")
 
-            # Check if 'main' is callable
-            if callable(main_function):
-                main_function()
-                print(f"Lab {lab_number} executed successfully.")
-            else:
-                print(f"Error: 'main' function not found in module {module_name}")
+                # Check if 'main' is callable
+                if callable(main_function):
+                    main_function()
+                    print(f"Lab {lab_number} executed successfully.")
+                    break
+                else:
+                    print(f"Error: 'main' function not found in module {module_name}")
+                    break
 
-        except ImportError as e:
-            print(f"Error importing module {module_name}: {e}")
+            except ImportError as e:
+                print(f"Error importing module {module_name}: {e}")
+                break
 
     def get_user_input(self):
         """Get user input for lab selection."""
@@ -51,9 +59,6 @@ class Runner:
     def main(self):
         while True:
             lab_number = self.get_user_input()
-            if lab_number == 6:
-                print("Lab 6 is unit tests only. Please run the unit tests instead")
-                continue
             if lab_number is None:
                 break
             self.run_lab(lab_number)

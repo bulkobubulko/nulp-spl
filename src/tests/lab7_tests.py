@@ -1,3 +1,5 @@
+from service.lab7.spotify_api import get_token, get_auth_token
+
 import unittest
 
 class TestLab7(unittest.TestCase):

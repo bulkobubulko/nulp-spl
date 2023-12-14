@@ -1,12 +1,10 @@
 import os
 
 from service.lab8.data_preprocessing import DataExploration, DataCleaning, DataVisualization
-
-FOLDER_PATH_DATASETS = 'src/data/lab8/datasets/'
-FOLDER_PATH_PLOTS = 'src/data/lab8/plots/'
+from config.path_config import FOLDER_PATH_PLOT_LAB8, FOLDER_PATH_DATASETS_LAB8
 
 # Checking if directories exist and creating them if not
-for directory in [FOLDER_PATH_PLOTS, FOLDER_PATH_DATASETS]:
+for directory in [FOLDER_PATH_PLOT_LAB8, FOLDER_PATH_DATASETS_LAB8]:
     if not os.path.exists(directory):
         os.makedirs(directory)
     
@@ -17,13 +15,13 @@ def main():
     if user_input:
         csv_path = user_input
     else:
-        csv_path = f'{FOLDER_PATH_DATASETS}USA_Housing.csv'
+        csv_path = f'{FOLDER_PATH_DATASETS_LAB8}USA_Housing.csv'
         print(f"Using default file path: {csv_path}")
 
     try:
-        explorer = DataExploration(csv_path, FOLDER_PATH_PLOTS, FOLDER_PATH_DATASETS)
-        cleaner = DataCleaning(csv_path, FOLDER_PATH_PLOTS, FOLDER_PATH_DATASETS)
-        visualizer = DataVisualization(csv_path, FOLDER_PATH_PLOTS, FOLDER_PATH_DATASETS)
+        explorer = DataExploration(csv_path, FOLDER_PATH_PLOT_LAB8, FOLDER_PATH_DATASETS_LAB8)
+        cleaner = DataCleaning(csv_path, FOLDER_PATH_PLOT_LAB8, FOLDER_PATH_DATASETS_LAB8)
+        visualizer = DataVisualization(csv_path, FOLDER_PATH_PLOT_LAB8, FOLDER_PATH_DATASETS_LAB8)
 
         explorer.data_exploration()
         cleaner.data_cleaning()

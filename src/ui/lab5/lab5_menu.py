@@ -1,10 +1,9 @@
 from service.lab5.three_d_shape import ThreeDShape
-
-SETTINGS_FILE_PATH = 'data/lab5/settings.json'
+from config.path_config import SETTINGS_FILE_PATH_LAB5
 
 def main():
     shape_obj = ThreeDShape()
-    shape_obj.set_settings_file_path(SETTINGS_FILE_PATH)
+    shape_obj.set_settings_file_path(SETTINGS_FILE_PATH_LAB5)
     shape_obj.load_settings()
     menu(shape_obj)
         

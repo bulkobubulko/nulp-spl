@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>shared.ascii_utils &mdash; nulp-spl 1.0.0 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=92fd9be5" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=19f00094" />
+
+  
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../../_static/documentation_options.js?v=8d563738"></script>
+        <script src="../../_static/doctools.js?v=888ff710"></script>
+        <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../index.html" class="icon icon-home">
+            nulp-spl
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../modules.html">src</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">nulp-spl</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../index.html">Module code</a></li>
+      <li class="breadcrumb-item active">shared.ascii_utils</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <h1>Source code for shared.ascii_utils</h1><div class="highlight"><pre>
+<span></span><span class="kn">import</span> <span class="nn">os</span>
+<span class="kn">import</span> <span class="nn">pyfiglet</span>
+<span class="kn">from</span> <span class="nn">colorama</span> <span class="kn">import</span> <span class="n">Fore</span>
+
+<div class="viewcode-block" id="set_font">
+<a class="viewcode-back" href="../../shared.html#shared.ascii_utils.set_font">[docs]</a>
+<span class="k">def</span> <span class="nf">set_font</span><span class="p">():</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Set font for ASCII-art.</span>
+<span class="sd">    </span>
+<span class="sd">    Returns:</span>
+<span class="sd">        font (str): Font name.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="c1"># Get list of font names</span>
+    <span class="n">fonts</span> <span class="o">=</span> <span class="n">pyfiglet</span><span class="o">.</span><span class="n">FigletFont</span><span class="o">.</span><span class="n">getFonts</span><span class="p">()</span>
+    
+    <span class="c1"># Enumerate and print fonts with numbering, starting from 1</span>
+    <span class="k">for</span> <span class="n">index</span><span class="p">,</span> <span class="n">font</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">fonts</span><span class="p">,</span> <span class="n">start</span><span class="o">=</span><span class="mi">1</span><span class="p">):</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">index</span><span class="si">}</span><span class="s2">. </span><span class="si">{</span><span class="n">font</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+        
+    <span class="n">user_input</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s1">&#39;Enter the font number: &#39;</span><span class="p">))</span>
+    <span class="n">font</span> <span class="o">=</span> <span class="n">fonts</span><span class="p">[</span><span class="n">user_input</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+    
+    <span class="k">return</span> <span class="n">font</span></div>
+
+
+<div class="viewcode-block" id="set_size">
+<a class="viewcode-back" href="../../shared.html#shared.ascii_utils.set_size">[docs]</a>
+<span class="k">def</span> <span class="nf">set_size</span><span class="p">():</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Set size for ASCII-art.</span>
+<span class="sd">    </span>
+<span class="sd">    Returns:</span>
+<span class="sd">        width (int): Width of ASCII-art.</span>
+<span class="sd">        height (int): Height of ASCII-art.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">width</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s1">&#39;Enter width: &#39;</span><span class="p">))</span>
+    <span class="n">height</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s1">&#39;Enter height: &#39;</span><span class="p">))</span>
+    
+    <span class="k">return</span> <span class="n">width</span><span class="p">,</span> <span class="n">height</span></div>
+
+    
+<div class="viewcode-block" id="set_symbols">
+<a class="viewcode-back" href="../../shared.html#shared.ascii_utils.set_symbols">[docs]</a>
+<span class="k">def</span> <span class="nf">set_symbols</span><span class="p">():</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Set symbol for ASCII-art.</span>
+<span class="sd">    </span>
+<span class="sd">    Returns:</span>
+<span class="sd">        symbol (str): Symbol to replace.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">regular_symbol</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s1">&#39;Enter regular symbol: &#39;</span><span class="p">)</span>
+    
+    <span class="n">set_shadow</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s1">&#39;Do you want to set a shadow symbol? (y/n): &#39;</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">set_shadow</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span> <span class="o">==</span> <span class="s1">&#39;y&#39;</span><span class="p">:</span>
+        <span class="n">shadow_symbol</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s1">&#39;Enter shadow symbol: &#39;</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">shadow_symbol</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
+    
+    <span class="c1"># Get list of ASCII symbols</span>
+    <span class="n">ascii_dec_values</span> <span class="o">=</span> <span class="p">[</span><span class="n">i</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">256</span><span class="p">)]</span>
+    <span class="n">ascii_symbols</span> <span class="o">=</span> <span class="p">[</span><span class="nb">chr</span><span class="p">(</span><span class="n">i</span><span class="p">)</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">ascii_dec_values</span><span class="p">]</span>
+    
+    <span class="c1"># Check if symbol is in ASCII</span>
+    <span class="k">if</span> <span class="n">regular_symbol</span> <span class="ow">and</span> <span class="n">shadow_symbol</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">ascii_symbols</span> <span class="ow">and</span> <span class="n">shadow_symbol</span> <span class="o">!=</span> <span class="s1">&#39;&#39;</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Symbol is not in ASCII.&#39;</span><span class="p">)</span>
+        <span class="k">return</span> <span class="kc">None</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Symbol changed!&quot;</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">regular_symbol</span><span class="p">,</span> <span class="n">shadow_symbol</span></div>
+
+    
+<div class="viewcode-block" id="set_color">
+<a class="viewcode-back" href="../../shared.html#shared.ascii_utils.set_color">[docs]</a>
+<span class="k">def</span> <span class="nf">set_color</span><span class="p">():</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Set color for ASCII-art.</span>
+<span class="sd">    </span>
+<span class="sd">    Returns:</span>
+<span class="sd">        color_code (str): Color code.</span>
+<span class="sd">        </span>
+<span class="sd">    Raises:</span>
+<span class="sd">        IndexError: If color number is not in range.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="c1"># Get dictinary where key is color name and value is color code</span>
+    <span class="n">colors</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">(</span><span class="n">Fore</span><span class="o">.</span><span class="vm">__dict__</span><span class="o">.</span><span class="n">items</span><span class="p">())</span>
+
+    <span class="c1"># Enumerate and print colors with numbering, starting from 1</span>
+    <span class="k">for</span> <span class="n">index</span><span class="p">,</span> <span class="n">color</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">colors</span><span class="o">.</span><span class="n">keys</span><span class="p">(),</span> <span class="n">start</span><span class="o">=</span><span class="mi">1</span><span class="p">):</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">index</span><span class="si">}</span><span class="s2">. </span><span class="si">{</span><span class="n">colors</span><span class="p">[</span><span class="n">color</span><span class="p">]</span><span class="si">}{</span><span class="n">color</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+     
+    <span class="n">user_input</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s1">&#39;Enter the color number: &#39;</span><span class="p">))</span>
+     
+    <span class="c1"># Get user input</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="n">color_code</span> <span class="o">=</span> <span class="n">colors</span><span class="p">[</span><span class="nb">list</span><span class="p">(</span><span class="n">colors</span><span class="o">.</span><span class="n">keys</span><span class="p">())[</span><span class="n">user_input</span><span class="o">-</span><span class="mi">1</span><span class="p">]]</span>
+        <span class="k">return</span> <span class="n">color_code</span>
+    <span class="k">except</span> <span class="ne">IndexError</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Color number is not in range. Available colors are in range from 1 to </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">colors</span><span class="p">)</span><span class="si">}</span><span class="s1">.&#39;</span><span class="p">)</span></div>
+
+         
+<div class="viewcode-block" id="set_alignment">
+<a class="viewcode-back" href="../../shared.html#shared.ascii_utils.set_alignment">[docs]</a>
+<span class="k">def</span> <span class="nf">set_alignment</span><span class="p">():</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Set alignment for ASCII-art.</span>
+<span class="sd">    </span>
+<span class="sd">    Returns:</span>
+<span class="sd">        alignment (str): Alignment.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">alignment</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s1">&#39;Enter alignment (left/center/right): &#39;</span><span class="p">)</span>
+    
+    <span class="k">return</span> <span class="n">alignment</span></div>
+
+   
+<div class="viewcode-block" id="set_3d_option">
+<a class="viewcode-back" href="../../shared.html#shared.ascii_utils.set_3d_option">[docs]</a>
+<span class="k">def</span> <span class="nf">set_3d_option</span><span class="p">():</span>
+    <span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
+        <span class="n">user_input</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s1">&#39;3D option (y/n): &#39;</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">user_input</span> <span class="o">==</span> <span class="s1">&#39;y&#39;</span><span class="p">:</span>
+            <span class="k">return</span> <span class="kc">True</span>
+        <span class="k">elif</span> <span class="n">user_input</span> <span class="o">==</span> <span class="s1">&#39;n&#39;</span><span class="p">:</span>
+            <span class="k">return</span> <span class="kc">False</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Invalid input. Please enter y or n.&#39;</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="change_symbols">
+<a class="viewcode-back" href="../../shared.html#shared.ascii_utils.change_symbols">[docs]</a>
+<span class="k">def</span> <span class="nf">change_symbols</span><span class="p">(</span><span class="n">art</span><span class="p">,</span> <span class="n">symbol</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Change symbols in ASCII-art.</span>
+<span class="sd">    </span>
+<span class="sd">    Args:</span>
+<span class="sd">        art (str): ASCII-art.</span>
+<span class="sd">        symbol (str): Symbol to replace.</span>
+<span class="sd">        </span>
+<span class="sd">    Returns:</span>
+<span class="sd">        art (str): ASCII-art with replaced symbols.</span>
+<span class="sd">    &quot;&quot;&quot;</span>    
+    <span class="k">for</span> <span class="n">char</span> <span class="ow">in</span> <span class="n">art</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">char</span> <span class="o">!=</span> <span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span> <span class="ow">and</span> <span class="n">char</span> <span class="o">!=</span> <span class="s1">&#39; &#39;</span><span class="p">:</span>
+            <span class="n">art</span> <span class="o">=</span> <span class="n">art</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="n">char</span><span class="p">,</span> <span class="n">symbol</span><span class="p">)</span>
+    
+    <span class="k">return</span> <span class="n">art</span> </div>
+
+
+<div class="viewcode-block" id="check_size">
+<a class="viewcode-back" href="../../shared.html#shared.ascii_utils.check_size">[docs]</a>
+<span class="k">def</span> <span class="nf">check_size</span><span class="p">(</span><span class="n">char_str</span><span class="p">,</span> <span class="n">width</span><span class="p">,</span> <span class="n">height</span><span class="p">):</span>
+    <span class="n">char_width</span> <span class="o">=</span> <span class="mi">8</span>
+    <span class="n">char_height</span> <span class="o">=</span> <span class="mi">8</span>
+    
+    <span class="n">str_length</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">char_str</span><span class="p">)</span> <span class="o">*</span> <span class="n">char_width</span>
+    <span class="n">terminal_columns</span><span class="p">,</span> <span class="n">terminal_lines</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">get_terminal_size</span><span class="p">()</span>
+    
+    <span class="k">if</span> <span class="n">width</span> <span class="o">&lt;</span> <span class="n">char_width</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Width </span><span class="si">{</span><span class="n">width</span><span class="si">}</span><span class="s2"> is too small for the string length of </span><span class="si">{</span><span class="n">str_length</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="k">elif</span> <span class="n">width</span> <span class="o">&gt;</span> <span class="n">terminal_columns</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Width </span><span class="si">{</span><span class="n">width</span><span class="si">}</span><span class="s2"> exceeds the terminal length of </span><span class="si">{</span><span class="n">terminal_columns</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">pass</span>
+        
+    <span class="k">if</span> <span class="n">height</span> <span class="o">&lt;</span> <span class="n">char_height</span> <span class="ow">or</span> <span class="n">height</span> <span class="o">&lt;</span> <span class="n">str_length</span> <span class="o">/</span> <span class="n">width</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Height </span><span class="si">{</span><span class="n">height</span><span class="si">}</span><span class="s2"> is too small for the string length of </span><span class="si">{</span><span class="n">str_length</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="k">elif</span> <span class="n">height</span> <span class="o">&gt;</span> <span class="n">terminal_lines</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Height </span><span class="si">{</span><span class="n">height</span><span class="si">}</span><span class="s2"> exceeds the terminal length of </span><span class="si">{</span><span class="n">str_length</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">pass</span></div>
+
+
+<div class="viewcode-block" id="preview_art">
+<a class="viewcode-back" href="../../shared.html#shared.ascii_utils.preview_art">[docs]</a>
+<span class="k">def</span> <span class="nf">preview_art</span><span class="p">(</span><span class="n">FOLDER_PATH</span><span class="p">,</span> <span class="n">art</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Preview ASCII-art.</span>
+<span class="sd">    </span>
+<span class="sd">    Args:</span>
+<span class="sd">        art (str): ASCII-art.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">art</span><span class="p">)</span>
+    
+    <span class="n">save_art_answ</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s1">&#39;Do you want to save your art? (y/n): &#39;</span><span class="p">)</span>
+    
+    <span class="k">if</span> <span class="n">save_art_answ</span> <span class="o">==</span> <span class="s1">&#39;y&#39;</span><span class="p">:</span>
+        <span class="n">save_art</span><span class="p">(</span><span class="n">FOLDER_PATH</span><span class="p">,</span> <span class="n">art</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">pass</span></div>
+
+
+<div class="viewcode-block" id="save_art">
+<a class="viewcode-back" href="../../shared.html#shared.ascii_utils.save_art">[docs]</a>
+<span class="k">def</span> <span class="nf">save_art</span><span class="p">(</span><span class="n">FOLDER_PATH</span><span class="p">,</span> <span class="n">art</span><span class="p">):</span>    
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Save ASCII-art to file.</span>
+<span class="sd">    </span>
+<span class="sd">    Args:</span>
+<span class="sd">        art (str): ASCII-art.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">file_name</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s1">&#39;Give a file name: &#39;</span><span class="p">)</span>
+    <span class="n">formated_file_name</span> <span class="o">=</span> <span class="n">FOLDER_PATH</span> <span class="o">+</span> <span class="n">file_name</span> <span class="o">+</span> <span class="s1">&#39;.txt&#39;</span>
+    
+    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">formated_file_name</span><span class="p">,</span> <span class="s1">&#39;w&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">file</span><span class="p">:</span>
+        <span class="n">file</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">art</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="show_art">
+<a class="viewcode-back" href="../../shared.html#shared.ascii_utils.show_art">[docs]</a>
+<span class="k">def</span> <span class="nf">show_art</span><span class="p">(</span><span class="n">FOLDER_PATH</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Show ASCII-art from file.</span>
+<span class="sd">    </span>
+<span class="sd">    Raises:</span>
+<span class="sd">        FileNotFoundError: If file not found.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="n">file_name</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s1">&#39;Enter file name: &#39;</span><span class="p">)</span>
+        <span class="n">formated_file_name</span> <span class="o">=</span> <span class="n">FOLDER_PATH</span> <span class="o">+</span> <span class="n">file_name</span> <span class="o">+</span> <span class="s1">&#39;.txt&#39;</span>
+        <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">formated_file_name</span><span class="p">,</span> <span class="s1">&#39;r&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">file</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="n">file</span><span class="o">.</span><span class="n">read</span><span class="p">())</span>
+    <span class="k">except</span> <span class="ne">FileNotFoundError</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;File not found.&#39;</span><span class="p">)</span></div>
+
+</pre></div>
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023, ym.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

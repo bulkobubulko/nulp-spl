@@ -2,13 +2,11 @@ from shared.ascii_art_settings import AsciiArtSettings
 from service.lab3.ascii_art_generator import create_ascii_art
 from ui.lab3.lab3_settings_menu import settings_menu
 from shared.ascii_utils import show_art
-
-FOLDER_PATH = 'src/data/lab3/ASCII-arts/'
-SETTINGS_FILE_PATH = 'src/data/lab3/settings.json'
+from config.path_config import SETTINGS_FILE_PATH_LAB3, FOLDER_PATH_LAB3
 
 def main():    
     settings_obj = AsciiArtSettings()
-    settings_obj.set_settings_file_path(SETTINGS_FILE_PATH)
+    settings_obj.set_settings_file_path(SETTINGS_FILE_PATH_LAB3)
     settings_obj.load_settings()
     
     while True:
@@ -21,9 +19,9 @@ def main():
         user_input = input('Enter option number: ')
         
         if user_input == '1':
-            create_ascii_art(FOLDER_PATH, settings_obj)
+            create_ascii_art(FOLDER_PATH_LAB3, settings_obj)
         elif user_input == '2':
-            show_art(FOLDER_PATH)
+            show_art(FOLDER_PATH_LAB3)
         elif user_input == '3':
             settings_menu(settings_obj)
         elif user_input == '4':

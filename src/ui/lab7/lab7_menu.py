@@ -1,7 +1,7 @@
 from service.lab7.spotify_api import get_token
 from service.lab7.user_input_handling import search_for_artist_api, search_for_track_api
 from shared.data_utils import view_user_history
-FOLDER_PATH_USER_LOGS = 'data/lab7/user_logs.log'
+from config.path_config import FOLDER_PATH_USER_LOGS_LAB7
               
 def main():
     token = get_token()
@@ -24,7 +24,7 @@ def menu(token):
             search_for_track_api(token)
         elif user_input == '3':
             print("User history:")
-            view_user_history(FOLDER_PATH_USER_LOGS)
+            view_user_history(FOLDER_PATH_USER_LOGS_LAB7)
         elif user_input == '0':
             print("Exiting...")
             break
